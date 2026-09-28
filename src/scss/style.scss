@@ -1,19 +1,62 @@
-@use 'fonts' as *;
-@use 'reset' as *;
-@use 'variables' as *;
-@use 'mixins' as *; // _mixins.scss 파일이 같은 폴더에 있는 경우
-@use 'layout' as *;
-@use 'utilities' as *;
+@use 'fonts'as *;
+@use 'reset'as *;
+@use 'variables'as *;
+@use 'mixins'as *; // _mixins.scss 파일이 같은 폴더에 있는 경우
+@use 'layout'as *;
+@use 'utilities'as *;
 
-body {
-  @include m.font-style(16px, 400, 1);
-  background-color: #fff;
+body {}
+
+main.center {
+  box-sizing: border-box;
+  width: 100%;
+  max-inline-size: clamp(21.438rem, calc(7.245rem + 60.555vw), 46rem); //343px to 736px
+  --padding: clamp(1.5rem, calc(0.546rem + 4.071vw), 2.5rem); //20px to 40px
+  --space: 2rem; //32px
 }
 
-// 컨텐츠 가운데 정렬 + 최대폭 wrapper. 챌린지마다 max-width 값만 바꿔서 쓴다.
-.container {
-  @include m.container(1110px, 24px);
+label {
+  display: block;
 }
 
-// tablet/desktop에서 레이아웃 구조 자체가 바뀔 때(예: flex-direction, grid-template-columns)는
-// @include m.mq('tablet') { ... } 처럼 각 셀렉터 안에서 사용한다.
+input[type=text] {
+  width: 100%;
+}
+
+.error-message {
+  display: none;
+}
+
+.contact-form {
+  --space: 1.5rem; //24px
+}
+
+.switcher {
+  // 세로 -> 가로 변하는 지점
+  --threshold: 21.4375rem;
+  // 첫 번째 값은 세로(row-gap), 두 번째 값은 가로(column-gap) 
+  gap: 1.5rem 1rem;
+}
+
+.query-type{
+  justify-content: flex-start;
+  .checkmark{
+    width: 1.5rem;  // 24px
+    height: 1.5rem; // 24px
+    border: 1px solid $Grey-500;
+    border-radius: 50%;
+  }
+}
+
+.agree > .cluster {
+  justify-content: flex-start;
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
