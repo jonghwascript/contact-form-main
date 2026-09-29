@@ -32,7 +32,7 @@ function setup() {
       };
     }).filter((control) => control.name);
   const errors = Object.fromEntries(
-    [...html.matchAll(/<span id="([^"]+)" class="error-message" hidden>/g)]
+    [...html.matchAll(/<span id="([^"]+)" class="error-message"[^>]*\bhidden>/g)]
       .map(([, id]) => [id, { id, hidden: true }]),
   );
   const classes = new Set();

@@ -22,19 +22,19 @@
               <label for="first-name" class="required">First Name</label>
               <input type="text" name="first-name" id="first-name" autocomplete="given-name"
                 aria-describedby="first-error" required>
-              <span id="first-error" class="error-message" hidden>This field is required</span>
+              <span id="first-error" class="error-message" role="alert" hidden>This field is required</span>
             </div>
             <div class="form-field stack">
               <label for="last-name" class="required">Last Name</label>
               <input type="text" name="last-name" id="last-name" autocomplete="family-name"
                 aria-describedby="last-error" required>
-              <span id="last-error" class="error-message" hidden>This field is required</span>
+              <span id="last-error" class="error-message" role="alert" hidden>This field is required</span>
             </div>
           </div>
           <div class="form-field stack">
             <label for="email-address" class="required">Email Address</label>
             <input type="email" name="email-address" id="email-address" aria-describedby="email-error" required>
-            <span id="email-error" class="error-message" hidden>Please enter a valid email address</span>
+            <span id="email-error" class="error-message" role="alert" hidden>Please enter a valid email address</span>
           </div>
           <fieldset class="stack">
             <legend class="sr-only">Query Type</legend>
@@ -53,13 +53,13 @@
                 Support Request
               </label>
             </div>
-            <span id="query-type-error" class="error-message" hidden>Please select a query type</span>
+            <span id="query-type-error" class="error-message" role="alert" hidden>Please select a query type</span>
           </fieldset>
           <div class="form-field stack">
             <label for="message" class="required">Message</label>
             <textarea name="message" class="message-input" id="message" aria-describedby="message-error"
               required></textarea>
-            <span id="message-error" class="error-message" hidden>This field is required</span>
+            <span id="message-error" class="error-message" role="alert" hidden>This field is required</span>
           </div>
         </div>
         <div class="form-field consent-field stack">
@@ -68,7 +68,7 @@
             <span class="checkmark"></span>
             <span class="required">I consent to being contacted by the team</span>
           </label>
-          <span id="consent-error" class="error-message" hidden>To submit this form, please consent to being contacted</span>
+          <span id="consent-error" class="error-message" role="alert" hidden>To submit this form, please consent to being contacted</span>
         </div>
         <input type="submit" class="contact-submit" value="Submit">
       </form>

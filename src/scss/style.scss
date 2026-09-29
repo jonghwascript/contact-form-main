@@ -11,7 +11,7 @@ body {
 
 label {
   display: block;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 400;
   font-size: 16px;
 }
@@ -55,7 +55,7 @@ main.center {
 
 .error-message {
   color: $Red;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 400;
   font-size: 1rem;
 }
@@ -76,7 +76,7 @@ main.center {
 }
 
 .contact-title {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 700;
   letter-spacing: -1px;
   color: $Grey-900;
@@ -188,8 +188,12 @@ fieldset.stack {
   border-radius: 0.5rem;
   color: $White;
 
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 700;
+}
+
+.contact-submit:hover {
+  background-color: hsl(169, 82%, 17%);
 }
 
 .success-notification {
@@ -199,7 +203,7 @@ fieldset.stack {
   top: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
-  width: clamp(20.438rem, calc(15.996rem + 18.952vw), 28.125rem);
+  width: min(28.125rem, calc(100% - 2rem));
   background-color: $Grey-900;
   color: $White;
   padding: 1.5rem;
@@ -210,7 +214,7 @@ fieldset.stack {
   }
 
   .with-icon {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Karla', sans-serif;
     font-weight: 700;
     font-size: 1.125rem;
 
@@ -230,7 +234,7 @@ fieldset.stack {
   }
 
   >p {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Karla', sans-serif;
     font-weight: 400;
     font-size: 1rem;
     color: $Green-200;
