@@ -14,13 +14,13 @@ label {
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
+}
 
-  @at-root.required::after {
-    content: '*';
-    margin-inline-start: 8px;
-    font-size: 1rem;
-    color: $Green-600;
-  }
+.required::after {
+  content: '*';
+  margin-inline-start: 8px;
+  font-size: 1rem;
+  color: $Green-600;
 }
 
 input[type=text],
@@ -54,11 +54,25 @@ main.center {
 }
 
 .error-message {
-  // display: none;
   color: $Red;
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
+}
+
+.error-message[hidden] {
+  display: none;
+}
+
+.query-type:has(input[aria-invalid=true]),
+.consent-label:has(input[aria-invalid=true]) > .checkmark {
+  border-color: $Red;
+}
+
+.query-type:has(input:focus-visible),
+.consent-label:has(input:focus-visible) > .checkmark {
+  outline: 2px solid $Green-600;
+  outline-offset: 3px;
 }
 
 .contact-title {
@@ -71,7 +85,7 @@ main.center {
 .contact-form {
   --space: 2.5rem; //40px
 
-  .input-wrap {
+  .contact-fields {
     --space: 1.5rem; //24px    
   }
 }
@@ -82,12 +96,12 @@ main.center {
   // 첫 번째 값은 세로(row-gap), 두 번째 값은 가로(column-gap) 
   gap: 1.5rem 1rem; //24px 16px
 
-  &.p-16 {
+  &[data-gap=normal] {
     gap: 1rem 1rem;
   }
 }
 
-.input-box.stack {
+.form-field.stack {
   --space: 8px;
 }
 
@@ -122,7 +136,7 @@ fieldset.stack {
 }
 
 
-.contact-message {
+.message-input {
   height: 240px;
   border: 1px solid $Grey-500;
   padding-block: 12px;
@@ -131,11 +145,11 @@ fieldset.stack {
   resize: none;
 }
 
-.agree.stack {
+.consent-field.stack {
   --space: 8px;
 }
 
-.agree-label {
+.consent-label {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -159,7 +173,7 @@ fieldset.stack {
     }
   }
 
-  label[for=agree] {
+  > .required {
     flex: 1;
     min-width: 0;
     word-break: normal;
@@ -178,9 +192,10 @@ fieldset.stack {
   font-weight: 700;
 }
 
-.modal {
+.success-notification {
   display: none;
-  position: absolute;
+  position: fixed;
+  z-index: 1;
   top: 24px;
   left: 50%;
   transform: translateX(-50%);
@@ -189,6 +204,10 @@ fieldset.stack {
   color: $White;
   padding: 24px;
   border-radius: 12px;
+
+  &.is-open {
+    display: block;
+  }
 
   .with-icon {
     font-family: 'Work Sans', sans-serif;
@@ -207,6 +226,7 @@ fieldset.stack {
       flex-shrink: 0;
       margin: 0;
     }
+
   }
 
   >p {

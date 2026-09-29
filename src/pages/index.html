@@ -16,63 +16,61 @@
     <main class="center box stack">
       <h1 class="contact-title">Contact Us</h1>
       <form class="contact-form stack">
-        <div class="stack input-wrap">
+        <div class="stack contact-fields">
           <div class="input-group switcher">
-            <div class="input-box stack">
+            <div class="form-field stack">
               <label for="first-name" class="required">First Name</label>
-              <input type="text" name="first-name" id="first-name" autocomplete="given-name" aria-invalid="true"
+              <input type="text" name="first-name" id="first-name" autocomplete="given-name"
                 aria-describedby="first-error" required>
-              <span id="first-error" class="error-message">This field is required</span>
+              <span id="first-error" class="error-message" hidden>This field is required</span>
             </div>
-            <div class="input-box stack">
-              <label for="last-name" class="required">Last Namee</label>
+            <div class="form-field stack">
+              <label for="last-name" class="required">Last Name</label>
               <input type="text" name="last-name" id="last-name" autocomplete="family-name"
                 aria-describedby="last-error" required>
-              <span id="last-error" class="error-message">This field is required</span>
+              <span id="last-error" class="error-message" hidden>This field is required</span>
             </div>
           </div>
-          <div class="input-box stack">
-            <label for="emailAddress" class="required">Email Address</label>
-            <input type="email" name="email-address" id="emailAddress" aria-describedby="email-error" required>
-            <span id="email-error" class="error-message">Please enter a valid email address</span>
+          <div class="form-field stack">
+            <label for="email-address" class="required">Email Address</label>
+            <input type="email" name="email-address" id="email-address" aria-describedby="email-error" required>
+            <span id="email-error" class="error-message" hidden>Please enter a valid email address</span>
           </div>
           <fieldset class="stack">
             <legend class="sr-only">Query Type</legend>
-            <div class="legend-replacement required" aria-hidden="true">Query Type</div>
-            <div class="input-group switcher p-16">
+            <div class="query-type-heading required" aria-hidden="true">Query Type</div>
+            <div class="input-group switcher" data-gap="normal">
               <label class="cluster query-type">
-                <input type="radio" name="qury-type" class="sr-only" value="General Enquiry"
+                <input type="radio" name="query-type" class="sr-only" value="General Enquiry"
                   aria-describedby="query-type-error" required>
                 <span class="checkmark"></span>
                 General Enquiry
               </label>
               <label class="cluster query-type">
-                <input type="radio" name="qury-type" class="sr-only" value="Support Request"
+                <input type="radio" name="query-type" class="sr-only" value="Support Request"
                   aria-describedby="query-type-error" required>
                 <span class="checkmark"></span>
                 Support Request
               </label>
             </div>
-            <span id="query-type-error" class="error-message">Please select a query type</span>
+            <span id="query-type-error" class="error-message" hidden>Please select a query type</span>
           </fieldset>
-          <div class="input-box">
-            <div class="input-box stack">
-              <label for="message" class="required">Message</label>
-              <textarea name="message" class="contact-message" id="message" aria-describedby="message-error"
-                required></textarea>
-              <span id="message-error" class="error-message">This field is required</span>
-            </div>
+          <div class="form-field stack">
+            <label for="message" class="required">Message</label>
+            <textarea name="message" class="message-input" id="message" aria-describedby="message-error"
+              required></textarea>
+            <span id="message-error" class="error-message" hidden>This field is required</span>
           </div>
         </div>
-        <div class="input-box agree stack">
-          <label class="agree-label">
-            <input type="checkbox" name="agree" id="agree" class="sr-only" aria-describedby="agree-error" required>
+        <div class="form-field consent-field stack">
+          <label class="consent-label">
+            <input type="checkbox" name="consent" id="consent" class="sr-only" aria-describedby="consent-error" required>
             <span class="checkmark"></span>
             <span class="required">I consent to being contacted by the team</span>
           </label>
-          <span id="agree-error" class="error-message">To submit this form, please consent to being contacted</span>
+          <span id="consent-error" class="error-message" hidden>To submit this form, please consent to being contacted</span>
         </div>
-        <input type="submit" class="contact-submit" value="Submit"></input>
+        <input type="submit" class="contact-submit" value="Submit">
       </form>
     </main>
     <footer class="attribution">
@@ -80,7 +78,7 @@
       Coded by <a href="#">Your Name Here</a>.
     </footer>
   </div>
-  <div class="modal">
+  <div class="success-notification" role="status" aria-atomic="true" tabindex="-1">
     <div class="with-icon">
       <svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21"
         fill="none">
@@ -93,6 +91,7 @@
       Thanks for completing the form. We’ll be in touch soon!
     </p>
   </div>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
