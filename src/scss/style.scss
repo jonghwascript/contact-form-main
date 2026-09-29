@@ -18,7 +18,7 @@ label {
 
 .required::after {
   content: '*';
-  margin-inline-start: 8px;
+  margin-inline-start: 0.5rem;
   font-size: 1rem;
   color: $Green-600;
 }
@@ -26,21 +26,21 @@ label {
 input[type=text],
 input[type=email] {
   width: 100%;
-  padding-block: 12px;
-  padding-inline: 24px;
-  border: 1px solid $Grey-500;
-  border-radius: 8px;
+  padding-block: 0.75rem;
+  padding-inline: 1.5rem;
+  border: 0.0625rem solid $Grey-500;
+  border-radius: 0.5rem;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid $Green-600;
+  outline: 0.125rem solid $Green-600;
 }
 
 input[aria-invalid=true],
 textarea[aria-invalid=true] {
-  border: 1px solid $Red;
+  border: 0.0625rem solid $Red;
 }
 
 
@@ -57,7 +57,7 @@ main.center {
   color: $Red;
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .error-message[hidden] {
@@ -71,8 +71,8 @@ main.center {
 
 .query-type:has(input:focus-visible),
 .consent-label:has(input:focus-visible) > .checkmark {
-  outline: 2px solid $Green-600;
-  outline-offset: 3px;
+  outline: 0.125rem solid $Green-600;
+  outline-offset: 0.1875rem;
 }
 
 .contact-title {
@@ -102,25 +102,25 @@ main.center {
 }
 
 .form-field.stack {
-  --space: 8px;
+  --space: 0.5rem;
 }
 
 fieldset.stack {
-  --space: 16px;
+  --space: 1rem;
 }
 
 .query-type {
   justify-content: flex-start;
-  border: 1px solid $Grey-500;
-  border-radius: 8px;
-  padding-block: 12px;
-  padding-inline: 24px;
-  --space: 12px;
+  border: 0.0625rem solid $Grey-500;
+  border-radius: 0.5rem;
+  padding-block: 0.75rem;
+  padding-inline: 1.5rem;
+  --space: 0.75rem;
 
   .checkmark {
     width: 1.5rem; // 24px
     height: 1.5rem; // 24px
-    border: 1px solid $Grey-500;
+    border: 0.0625rem solid $Grey-500;
     border-radius: 50%;
   }
 
@@ -130,23 +130,23 @@ fieldset.stack {
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
-      border: 1px solid transparent;
+      border: 0.0625rem solid transparent;
     }
   }
 }
 
 
 .message-input {
-  height: 240px;
-  border: 1px solid $Grey-500;
-  padding-block: 12px;
-  padding-inline: 24px;
-  border-radius: 8px;
+  height: 15rem;
+  border: 0.0625rem solid $Grey-500;
+  padding-block: 0.75rem;
+  padding-inline: 1.5rem;
+  border-radius: 0.5rem;
   resize: none;
 }
 
 .consent-field.stack {
-  --space: 8px;
+  --space: 0.5rem;
 }
 
 .consent-label {
@@ -154,13 +154,13 @@ fieldset.stack {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 16px;
+  gap: 1rem;
 
   .checkmark {
     flex-shrink: 0;
-    width: 24px;
-    height: 24px;
-    border: 1px solid $Grey-500;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.0625rem solid $Grey-500;
   }
 
   &:has(input[type=checkbox]:checked) {
@@ -181,11 +181,11 @@ fieldset.stack {
 }
 
 .contact-submit {
-  padding-inline: 40px;
-  padding-block: 16px;
+  padding-inline: 2.5rem;
+  padding-block: 1rem;
   background-color: $Green-600;
-  border: 1px solid #0B0B43;
-  border-radius: 8px;
+  border: 0.0625rem solid #0B0B43;
+  border-radius: 0.5rem;
   color: $White;
 
   font-family: 'Work Sans', sans-serif;
@@ -196,14 +196,14 @@ fieldset.stack {
   display: none;
   position: fixed;
   z-index: 1;
-  top: 24px;
+  top: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
   width: clamp(20.438rem, calc(15.996rem + 18.952vw), 28.125rem);
   background-color: $Grey-900;
   color: $White;
-  padding: 24px;
-  border-radius: 12px;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
 
   &.is-open {
     display: block;
@@ -217,11 +217,11 @@ fieldset.stack {
     //폰트 크기와 SVG 크기가 다르다.
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
 
     .icon {
-      width: 24px;
-      height: 24px;
+      width: 1.5rem;
+      height: 1.5rem;
       // 텍스트가 길어져도 아이콘(24px)이 찌그러지지 않게 방어합니다
       flex-shrink: 0;
       margin: 0;
@@ -232,7 +232,7 @@ fieldset.stack {
   >p {
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     color: $Green-200;
   }
 
